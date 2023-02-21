@@ -16,24 +16,62 @@
         <h1 class="timer">Time Remaining: <span id="timer"></span></h1>
     </header>
 
-    <div class="start-quiz-container" class="show">
-        <div class="start-container">
+    <div id="start-quiz-container" class="show">
+        <div class="start">
             <h2>Coding Quiz Challenge</h2>
             <p>
-                Answer the following code-related questions within the time limit. Incorrect answers will deduct your
+                Answer the following code-related questions within the time limit. Incorrect answers will deduct
+                your
                 time.
             </p>
             <button class="btn startend" id="start-game">Start Quiz</button>
         </div>
     </div>
 
+    <!-- question section triggered by 'start game' button -->
     <section id="question-container" class="hide">
-        <div class="question section">
+        <div class="questions">
             <div id="questions"></div>
             <div id="answer-buttons" class="btn-grid"></div>
         </div>
     </section>
 
-    <section id="" </body>
+    <!--end of quiz section -->
+    <section id="final-container" class="hide">
+        <div class="end">
+            <div id=final-score>
+                <h3>You Did It!</h3>
+            </div>
+            <form id="initials-form" class="initials">
+                <p> Enter Initials:
+                    <input type="text" name="initials" id="initials" class="text-input" />
+                    <button class="btn startend" id="submit-score" type="submit">Submit</button>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- high score page/section -->
+    <section id="high-score-container" class="hide">
+        <div class="score">
+            <h3 class="highscore">High Scores</h3>
+            <ol id="high-score-list" class="score-list"></ol>
+            <div>
+                <button class="btn" id="go-back">Go back</button>
+                <button class="btn" id="clear-high-scores">Clear high scores</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- answer feedback -->
+    <div class="hide" id="correct">
+        <h4>Correct!</h4>
+    </div>
+    <div class="hide" id="wrong">
+        <h4>Incorrect!</h4>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
 
 </html>
