@@ -5,7 +5,7 @@
 :root {
   font-size: 50px;
   --primary: #0400ff;
-  --secondary: #dd006f;
+  --secondary: #f18abe;
 }
 
 body {
@@ -74,3 +74,5 @@ header h1 {
   background: var(--secondary);
   cursor: pointer;
 }
+
+.banner
