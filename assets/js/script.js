@@ -40,9 +40,9 @@ var question = [
         choices: [{ choice: '1. <h1>' }, { choice: '2. <js>' }, { choice: '3. <script>' }, { choice: '4. <head>' }]
     },
     {
-        q: 'In the code -- setinterval(time(),1000) -- what is time()?',
-        a: '1. callback function',
-        choices: [{ choice: '1. callback function' }, { choice: '2. undefined' }, { choice: '3. variable' }, { choice: '4. all of the above' }]
+        q: 'JavaScript is a ___ -side programming language.',
+        a: '3. Both',
+        choices: [{ choice: '1. Client' }, { choice: '2. Server' }, { choice: '3. Both' }, { choice: '4. None' }]
     },
     {
         q: 'How do you find the number with the highest value of x and y?',
@@ -50,14 +50,14 @@ var question = [
         choices: [{ choice: '1. ceil(x, y)' }, { choice: '2. Math.ceil(x, y)' }, { choice: '3. top(x, y)' }, { choice: '4. Math.max(x, y)' }]
     },
     {
-        q: 'When did javascript first appear?',
-        a: '1. 1995',
-        choices: [{ choice: '1. 1995' }, { choice: '2. Roaring twenties' }, { choice: '3. 2005' }, { choice: '4. 2000' }]
+        q: 'Which of the following will write the message “Hello!” in an alert box?',
+        a: '4. alert(“Hello!”);',
+        choices: [{ choice: '1. alertBox(“Hello!”);' }, { choice: '2. alert(Hello!);' }, { choice: '3.  msgAlert(“Hello!”);' }, { choice: '4. alert(“Hello!”);' }]
     },
     {
-        q: 'What does DOM stand for?',
-        a: '2. Document Object Model',
-        choices: [{ choice: '1. Do Overnight Modules' }, { choice: '2. Document Object Model' }, { choice: '3. Divas Obviously Model' }, { choice: '4. Do Oo Mo' }]
+        q: 'Which of the following type of variable is visible only within a function where it is defined?',
+        a: '2. local variable',
+        choices: [{ choice: '1. global variable)' }, { choice: '2. local variable' }, { choice: '3. Both of the above' }, { choice: '4. None of the above.' }]
     },
     {
         q: 'What is getItem commonly used for?',
@@ -89,7 +89,7 @@ const renderStartPage = () => {
 
 // every second, check if game-over is true, or if there is time left. 
 const setTime = () => {
-    timeleft = 30;
+    timeleft = 35;
 
     var timercheck = setInterval(function () {
         timerEl.innerText = timeleft;
@@ -132,7 +132,7 @@ const resetAnswers = () => {
     };
 };
 
-// display question information (including answer buttons)
+// display questions and answer buttons
 const displayQuestion = (index) => {
     questionEl.innerText = index.q
     for (var i = 0; i < index.choices.length; i++) {
@@ -144,7 +144,7 @@ const displayQuestion = (index) => {
         answerbuttonsEl.appendChild(answerbutton)
     }
 };
-// display correct! on screen
+// display correct! or incorrect on screen
 const answerCorrect = () => {
     if (correctEl.className = "hide") {
         correctEl.classList.remove("hide")
@@ -153,7 +153,7 @@ const answerCorrect = () => {
         wrongEl.classList.add("hide")
     }
 }
-// display wrong! on screen
+
 const answerWrong = () => {
     if (wrongEl.className = "hide") {
         wrongEl.classList.remove("hide")
@@ -173,12 +173,13 @@ const answerCheck = (event) => {
 
     else {
         answerWrong()
-        timeleft = timeleft - 3;
+        timeleft = timeleft - 5;
     };
 
     // go to next question, check if there is more questions
-    QuestionIndex++
+
     if (arrayShuffledQuestions.length > QuestionIndex + 1) {
+        QuestionIndex++
         getQuestion()
     }
     else {
@@ -237,7 +238,6 @@ const createHighScore = (event) => {
 
     saveHighScore();
     displayHighScores();
-
 }
 // save high score
 const saveHighScore = () => {
@@ -271,6 +271,7 @@ const loadHighScore = () => {
 // renders things all things hidden but the high score screen
 const displayHighScores = () => {
 
+    containerStartEl.style.visibility = ('hidden');
     containerHighScoresEl.classList.remove("hide");
     containerHighScoresEl.classList.add("show");
     gameover = "true"
