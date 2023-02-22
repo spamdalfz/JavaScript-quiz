@@ -30,11 +30,6 @@ var QuestionIndex = 0
 // array of questions 
 var question = [
     {
-        q: 'What is the correct way to write a JavaScript array?',
-        a: '1. var colors = ["red", "green", "blue"]',
-        choices: [{ choice: '1. var colors = ["red", "green", "blue"]  ' }, { choice: '2. var colors = "red", "green", "blue"' }, { choice: '3. var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")' }, { choice: '4. var colors = (1:"red", 2:"green", 3:"blue") ' }]
-    },
-    {
         q: 'Inside which HTML element do we put the javascript?',
         a: '3. <script>',
         choices: [{ choice: '1. <h1>' }, { choice: '2. <js>' }, { choice: '3. <script>' }, { choice: '4. <head>' }]
@@ -57,7 +52,7 @@ var question = [
     {
         q: 'Which of the following type of variable is visible only within a function where it is defined?',
         a: '2. local variable',
-        choices: [{ choice: '1. global variable)' }, { choice: '2. local variable' }, { choice: '3. Both of the above' }, { choice: '4. None of the above.' }]
+        choices: [{ choice: '1. global variable' }, { choice: '2. local variable' }, { choice: '3. Both of the above' }, { choice: '4. None of the above.' }]
     },
     {
         q: 'What is getItem commonly used for?',
