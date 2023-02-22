@@ -109,6 +109,7 @@ header h1 {
   font-size: 80%;
 }
 
+/* final score and initial input screen */
 .end input {
   outline: thick;
   border-width: 2px;

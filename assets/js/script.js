@@ -1,4 +1,4 @@
-//containers
+// dom selectors
 var containerStartEl = document.getElementById("start-quiz-container");
 var containerQuestionEl = document.getElementById("question-container");
 var containerFinalEl = document.getElementById("final-container");
