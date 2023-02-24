@@ -19,4 +19,4 @@ JavaScript multiple choice quiz that includes a timer and highscore list.
 * JavaScript
 
 ## Contact
-Mady by Corey Vasser
+Corey Vasser
